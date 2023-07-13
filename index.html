@@ -1,0 +1,351 @@
+
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Collyrium v0.0.0</title>
+		<link rel="icon" href="icons/collyrium.ico" type="image/x-icon" />
+		<link type="text/css" rel="stylesheet" href="fluig-style-guide.min.css"/>
+		<link type="text/css" rel="stylesheet" href="index.css"/>
+		<script type="text/javascript" src="js/jquery224.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/mustache.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/template.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/help.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/design.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/sourceCode.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/mif.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="fluig-style-guide">
+			<div id="divApp">
+				<div class="div-form scroll">
+					<form name="form">
+						<div class="panel panel-default" id="panel_titulo">
+							<div class="panel-body">
+								<h1>
+									<b>Título</b>
+								</h1>
+							</div>
+						</div>
+						<div class="panel panel-default" id="panel_dadosdasolicitacao">
+							<div class="panel-heading ">
+								<h3 class="panel-title">
+									<b>Dados da solicitação</b>
+								</h3>
+							</div>
+							<div class="panel-body">
+							</div>
+						</div>
+					</form>
+				</div>	
+				<div class="div-tool nav-page">				
+					<ul id="ulComp" class="list-group">
+						<li class="list-group-item li-panel">
+							<img src="icons/help.png"/>
+							Ajuda
+						</li>
+						<li class="list-group-item li-panel" data-element='{"element":"panel","location":"form"}'>
+							<img src="icons/panel.png"/>
+							Painel
+						</li>
+						<li class="list-group-item li-panel" data-element='{"element":"row","location":"panel"}'>
+							<img src="icons/row.png"/>
+							Linha
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"text","location":"row"}'>
+							<img src="icons/text.png"/>
+							Campo de Texto
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"date","location":"row"}'>
+							<img src="icons/date.png"/>
+							Campo de Data
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"money","location":"row"}'>
+							<img src="icons/money.png"/>
+							Campo de Moeda
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"percent","location":"row"}'>
+							<img src="icons/percent.png"/>
+							Campo de Porcent.
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"zoom","location":"row"}'>
+							<img src="icons/zoom.png"/>
+							Campo com Zoom
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"select","location":"row"}'>
+							<img src="icons/select.png"/>
+							Campo de Seleção
+						</li>
+						<li class="list-group-item li-group" data-element='{"element":"groupRadio","location":"row"}'>
+							<img src="icons/radioGroup.png"/>
+							Grupo Radio
+						</li>
+						<li class="list-group-item li-radio" data-element='{"element":"radio","location":"group"}'>
+							<img src="icons/radio.png"/>
+							Opção para Radio
+						</li>
+						<li class="list-group-item li-group" data-element='{"element":"groupCheckbox","location":"row"}'>
+							<img src="icons/checkboxGroup.png"/>
+							Grupo Checkbox
+						</li>
+						<li class="list-group-item li-checkbox" data-element='{"element":"checkbox","location":"group"}'>
+							<img src="icons/checkbox.png"/>
+							Opção Checkbox
+						</li>
+						<li class="list-group-item li-input" data-element='{"element":"textarea","location":"row"}'>
+							<img src="icons/textarea.png"/>
+							Área de Texto
+						</li>
+						<li class="list-group-item li-group" data-element='{"element":"groupPaiFilho","location":"row"}'>
+							<img src="icons/childGroup.png"/>
+							Tabela Pai Filho
+						</li>
+						<li class="list-group-item li-title" data-element='{"element":"title","location":"form"}'>
+							<img src="icons/title.png"/>
+							Título
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="divHelp" class="div-hide">
+				<div class="panel panel-success internal">
+				    <div class="panel-heading">
+				        <h3 class="panel-title"><b class="internal">Ajuda</b></h3>
+				    </div>
+				    <div class="panel-body">
+				        <h3 class="panel-title"><b class="internal">Funcionalidades</b></h3>
+						<ul>
+							<li><b>Selecionar elemento:</b> 
+								<ol>
+									<li>Clique simples no elemento desejado.</li>
+								</ol>
+							</li>
+							<li><b>Remover seleção do elemento:</b>
+								<ol>
+									<li>Clique simples no elemento selecionado.</li>
+								</ol>
+							</li>
+							<li><b>Remover seleção de todos os elementos selecionados:</b>
+								<ol>
+									<li>Pressionar a tecla [L].</li>
+								</ol>
+							</li>
+							<li><b>Incluir elemento:</b>
+								<ol>
+									<li>Selecionar o container destino (exceto título e painel);</li>
+									<li>Clicar no item do menu de elementos.</li>
+								</ol>
+							</li>
+							<li><b>Apagar elemento:</b>
+								<ol>
+									<li>Selecionar o elemento;</li>
+									<li>Pressionar a tecla [Delete].</li>
+								</ol>
+								Caso exista mais de um elemento selecionado, apenas o mais interno será removido;
+							</li>
+							<li><b>Editar label:</b>
+								<ol>
+									<li>Dois cliques no label;</li>
+									<li>Editar o texto na janela que será exibida;</li>
+									<li>Clicar no botão [OK].</li>
+								</ol>
+								Após a janela de edição do label ser exibida a janela para editar a classe de tamanho do elemento será exibida;
+							</li>
+							<li><b>Editar tamanho:</b>
+								<ol>
+									<li>Dois cliques no label;</li>
+									<li>Clicar no botão [OK]. Após a janela do label será exibida e janela para editar a classe de tamanho do elemento;</li>
+									<li>Editar a classe;</li>
+									<li>Clicar no botão [OK].</li>
+								</ol>
+							</li>
+							<li><b>Mover Horizontalmente:</b> Considerando que tenha dois ou mais campos em uma mesma linha e queira trocar a ordem deles.
+								<ol>
+									<li>Selecionar o campo;</li>
+									<li>Pressionar a tecla de direção (seta) esquerda ou direita.</li>
+								</ol>
+							</li>
+							<li><b>Mover Verticalmente:</b> Considerando que queria colocar o campo na linha de cima ou de baixo.
+								<ol>
+									<li>Selecionar o campo;</li>
+									<li>Pressionar a tecla de direção (seta) cima ou baixo.</li>
+								</ol>
+							</li>
+							<li><b>Somente Leitura:</b> Habilitar ou remover o readonly do campo
+								<ol>
+									<li>Dois cliques no campo.</li>
+								</ol>
+								Funcionalidade válida apenas para os campos: Texto, Data, Moeda, Porcentagem, Zoom e Área de Texto.
+							</li>
+							<li><b>Exportar código fonte do formulário:</b>
+								<ol>
+									<li>Pressionar a tecla [F9].</li>
+								</ol>
+								F9 também fecha a tela do código fonte.
+							</li>
+							<li><b>Importar código fonte do formulário:</b>
+								<ol>
+									<li>Acessar a tela do código fonte;</li>
+									<li>Sobrescrever o código existente com o código a ser exportado;</li>
+									<li>Fechar a tela do código fonte.</li>
+								</ol>
+							</li>
+							<li><b>Gerar documentação (MIF998):</b>
+								<ol>
+									<li>Pressionar a tecla [F10].</li>
+								</ol>
+								F10 também fecha a tela da MIF.
+							</li>
+						</ul>
+						<button type="button" class="btn btn-info" id="closeHelp">Fechar</button>
+				    </div>
+				</div>
+			</div>
+			<div id="divSource" class="div-hide">
+				<div class="panel panel-success internal">
+				    <div class="panel-heading">
+				        <h3 class="panel-title"><b class="internal">Código Fonte</b></h3>
+				    </div>
+				    <div class="panel-body">
+				        <div class="form-group row internal">
+							<div class="col-md-12 internal">
+								<label for="formSource" class="internal">Aqui deve conter somente o fonte que fica dentro da tag form</label>
+								<textarea class="form-control" name="formSource" id="formSource" rows="24"></textarea>
+							</div>
+						</div>
+				    </div>
+				</div>
+			</div>
+			<div id="divMif" class="div-hide">
+				<div class="panel panel-success internal">
+				    <div class="panel-heading">
+				        <h3 class="panel-title"><b class="internal">Engenharia de Processo - MIF 998</b></h3>
+				    </div>
+				    <div class="panel-body">
+				        <h2 class="h2-mif">7.1 Propriedade dos campos</h2>
+						<table id="tablePanelList" class="table-bordered table-mif"></table>
+						<script id="tplPanelList" type="text/html">
+							<tr>
+								<th class="table-mif-h1">Seção</th>
+								<th class="table-mif-h1">Descrição</th>
+							</tr>
+							{{#panel}}
+							<tr>
+								<td>{{code}}</td>
+								<td>{{label}}</td>
+							</tr>
+							{{/panel}}
+						</script>
+						<br />
+						<table id="tableFieldDetail" class="table-bordered table-mif"></table>
+						<script id="tplFieldDetail" type="text/html">
+							<tr>
+								<th colspan="2" class="table-mif-h1">Identificação</th>
+								<th colspan="2" class="table-mif-h1">Dado</th>
+								<th colspan="2" class="table-mif-h1">Visualização</th>
+								<th class="table-mif-h1">Integração</th>
+							</tr>
+							<tr>
+								<th>Código</th>
+								<th>Título</th>
+								<th>Tipo</th>
+								<th>Seleção(valores para campo lista)</th>
+								<th>Máscara</th>
+								<th>Preenchimento</th>
+								<th>Integrado</th>
+							</tr>
+							{{#panel}}
+							<tr>
+								<td colspan="7" class="section">{{label}}</td>
+							</tr>
+							{{#field}}
+							<tr class="line">
+								<td>{{id}}</td>
+								<td>{{label}}</td>									
+								<td>{{type}}</td>
+								<td>{{list}}</td>
+								<td>{{format}}</td>
+								<td>{{filling}}</td>
+								<td>{{integrated}}</td>
+							</tr>
+							{{/field}}
+							{{/panel}}
+						</script>
+						<h2 class="h2-mif">7.2 Descrição e regras dos campos</h2>
+						<table id="tableFieldRule" class="table-bordered table-mif"></table>
+						<script id="tplFieldRule" type="text/html">
+							<tr>
+								<th class="table-mif-h1">Código</th>
+								<th class="table-mif-h1">Título</th>
+								<th class="table-mif-h1">Regra</th>
+							</tr>
+							{{#panel}}
+							<tr>
+								<td colspan="3" class="section">{{label}}</td>
+							</tr>
+							{{#field}}
+							<tr class="line">
+								<td>{{id}}</td>
+								<td>{{label}}</td>									
+								<td></td>
+							</tr>
+							{{/field}}
+							{{/panel}}
+						</script>
+						<h2 class="h2-mif">7.3 Controle dos campos nas atividades</h2>
+						<table id="tableFieldControl" class="table-bordered table-mif"></table>
+						<script id="tplFieldControl" type="text/html">
+							<tr>
+								<th colspan="10" class="table-mif-h1">Controle de campos</th>
+							</tr>
+							<tr>
+								<th colspan="2" rowspan="2">Legenda:<br/>
+									O - Obrigatório<br/>
+									E - Editável<br/>
+									B - Bloqueado<br/>
+									OC – Oculto<br/>
+									<br/>
+									OBS: Quando houver mais de um controle (opção) indicada verificar a tabela "Descrição dos campos" na coluna "Descrição / Regras" para maiores detalhes.
+								</th>
+								<th colspan="8">Atividades</th>
+							</tr>
+							<tr>
+								<td rowspan="2">1- Início</td>
+								<td rowspan="2">2- Meio</td>
+								<td rowspan="2">Fins, Gateways, Atividades de Serviço</td>
+								<td rowspan="2">&nbsp;</td>
+								<td rowspan="2">&nbsp;</td>
+								<td rowspan="2">&nbsp;</td>
+								<td rowspan="2">&nbsp;</td>
+								<td rowspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<th>Código</th>
+								<th>Título</th>
+							</tr>
+							{{#panel}}
+							<tr>
+								<td colspan="10" class="section">{{label}}</td>
+							</tr>
+							{{#field}}
+							<tr class="line">
+								<td>{{id}}</td>
+								<td>{{label}}</td>									
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							{{/field}}
+							{{/panel}}
+						</script>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

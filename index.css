@@ -1,0 +1,83 @@
+/* App */
+.div-form{
+	background-color: #FFF;
+	float: left;
+	padding: 10px;
+	padding-right: 20px;
+	width: 84%; 
+}
+
+.div-hide{display:none;}
+
+.div-tool{
+	background-color: #FFF;
+	cursor: pointer;
+	float: left;
+	height: 100%;
+	margin-left: 0.5%;
+	width: 15.5%; 
+}
+
+.scroll{
+	height: 100vh;   
+	overflow-y : auto;
+}
+
+/* Design */
+.input-danger{
+	border: 1px solid blue;
+}
+
+.row-danger{
+	border: 1px solid red !important;
+}
+
+.row-empty{
+	border: 1px solid black;
+	height: 20px;
+}
+
+.span-danger{
+	border: 1px solid green;
+}
+
+
+/* Mif */
+.h2-mif{
+	font-size: 11pt !important;
+	font-family: Century Gothic !important;
+	color: #000000 !important;
+	font-weight: bold !important;
+}
+
+.table-mif{
+	width: 800px;
+}
+
+.table-mif th{
+	background-color: #BFBFBF;
+	text-align: center !important;
+	font-style: italic;
+}
+
+.table-mif th , .table-mif td{
+	border: 1px solid #000000 !important;
+	color: #000000;
+	font-size: 11pt !important;
+	font-family: Trebuchet MS !important;
+}
+
+.table-mif-h1{
+	background-color: #808080 !important;
+	text-align: center !important;
+	font-style: italic;
+}
+
+.section{
+	color: #000000 !important;
+	font-weight: bold;
+	text-align: center;
+	font-size: 11pt !important;
+	font-family: Calibri !important;
+	background-color: #B1DA96;
+}
